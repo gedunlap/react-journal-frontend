@@ -1,0 +1,28 @@
+$maincolor: teal;
+$secondcolor: black;
+$contrastcolor: white;
+
+@mixin white-text-teal-bg {
+    color: $contrastcolor;
+    background-color: $maincolor;
+}
+
+@mixin black-text-white-bg {
+    color: $secondcolor;
+    background-color: $contrastcolor;
+}
+
+nav {
+    @include white-text-teal-bg;
+    display: flex;
+    justify-content: flex-start;
+
+    a {
+        @include white-text-teal-bg;
+        div {
+            margin: 10px;
+            font-size: large;
+            font-weight: 900;
+        }
+    }
+}
